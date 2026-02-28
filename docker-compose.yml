@@ -9,10 +9,7 @@ services:
       - "5500:5500"
       - "8080:8080"
     environment:
-      - ORACLE_SID=ORCL
-      - ORACLE_PDB=ORCLPDB1
-      - ORACLE_PWD=Oracle123
-      - ORACLE_CHARACTERSET=AL32UTF8
+      - ORACLE_PASSWORD=Oracle123
     volumes:
       - oracle-data:/opt/oracle/oradata
       - ./scripts:/opt/oracle/scripts/startup

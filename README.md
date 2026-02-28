@@ -1,15 +1,14 @@
 # Oracle 21c with APEX 24 Setup
 
 ## Prerequisites
-1. Place `LINUX.X64_213000_db_home.zip` in this directory
-2. APEX will be downloaded automatically during build
+- APEX will be downloaded automatically during first startup
 
 ## Setup
 ```bash
 # Build and start
 docker-compose up -d
 
-# Monitor logs
+# Monitor logs (first startup takes 10-15 minutes)
 docker-compose logs -f
 ```
 
