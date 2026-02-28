@@ -1,8 +1,8 @@
 # Oracle 21c with APEX 24 Setup
 
 ## Prerequisites
-1. Download APEX 24.1 from Oracle: https://www.oracle.com/tools/downloads/apex-downloads.html
-2. Place `apex_24.1.zip` and `LINUX.X64_213000_db_home.zip` in this directory
+1. Place `LINUX.X64_213000_db_home.zip` in this directory
+2. APEX will be downloaded automatically during build
 
 ## Setup
 ```bash

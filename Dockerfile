@@ -34,11 +34,16 @@ USER oracle
 COPY --chown=oracle:oinstall dbca.rsp /tmp/
 RUN dbca -silent -createDatabase -responseFile /tmp/dbca.rsp
 
-COPY --chown=oracle:oinstall apex_24.1.zip /tmp/
-RUN cd /tmp && unzip -q apex_24.1.zip
+RUN wget -O /tmp/apex-latest.zip https://download.oracle.com/otn_software/apex/apex-latest.zip && \
+    cd /tmp && unzip -q apex-latest.zip && rm apex-latest.zip
 
 COPY --chown=oracle:oinstall install_apex.sql /tmp/
-RUN echo "exit" | sqlplus / as sysdba @/tmp/install_apex.sql
+RUN lsnrctl start && \
+    sqlplus / as sysdba << EOF
+STARTUP;
+@/tmp/install_apex.sql
+EXIT;
+EOF
 
 EXPOSE 1521 5500 8080
 
