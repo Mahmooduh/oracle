@@ -1,7 +1,7 @@
-FROM container-registry.oracle.com/database/enterprise:21.3.0.0
+FROM container-registry.oracle.com/database/express:21.3.0-xe
 
-ENV ORACLE_SID=ORCLCDB \
-    ORACLE_PDB=ORCLPDB1 \
+ENV ORACLE_SID=XE \
+    ORACLE_PDB=XEPDB1 \
     ORACLE_PWD=Oracle123
 
 USER root

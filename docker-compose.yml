@@ -9,8 +9,8 @@ services:
       - "5500:5500"
       - "8080:8080"
     environment:
-      - ORACLE_SID=ORCLCDB
-      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_SID=XE
+      - ORACLE_PDB=XEPDB1
       - ORACLE_PWD=Oracle123
       - ORACLE_CHARACTERSET=AL32UTF8
     volumes:
