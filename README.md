@@ -2,14 +2,10 @@
 
 ## Prerequisites
 1. Download APEX 24.1 from Oracle: https://www.oracle.com/tools/downloads/apex-downloads.html
-2. Place `apex_24.1.zip` in this directory
-3. Accept Oracle Container Registry license at: https://container-registry.oracle.com
+2. Place `apex_24.1.zip` and `LINUX.X64_213000_db_home.zip` in this directory
 
 ## Setup
 ```bash
-# Login to Oracle Container Registry
-docker login container-registry.oracle.com
-
 # Build and start
 docker-compose up -d
 
